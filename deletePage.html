@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>DELETE</title>
+</head>
+<body>
+<hr>
+<div>
+    <hr>
+    <h3>Delete this USER? </h3>
+    <hr>
+    <form th:method="POST" th:action="@{/delete/{id}(id=${user.getId()})}" th:object = "${user}" >
+        <input type="hidden" th:fild="*{id}">
+        <fieldset style="width: 350px; height: 150px; background-color: lavender ">
+            <legend>Edit User:</legend>
+            <p><label style="margin-left: 50px"> Name <em>*</em> </label>
+                <input type="text" placeholder="User name" th:field="*{username}"></p>
+            <p><label style="margin-left: 50px"> Password <em>*</em>
+                </label><input type="text" placeholder="password" th:field="*{password}"></p>
+            <p><label style="margin-left: 50px"> Enabled <em>*</em>
+            </label><input type="text" placeholder="enable" th:field="*{enabled}"></p>
+        </fieldset>
+        <p style=""><input type="submit" value="DELETE_USER"></p>
+        <a style="" href="/admin"><input type="submit" value="DON'T"></a>
+    </form>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+
+    <menu type="toolbar" style="list-style-type:none">
+        <li>
+            <menu label="menu">
+                
+                
+            </menu>
+        </li>
+    </menu>
+</head>
+<body>
+    <div>
+        <h3>Hello, admin!!</h3>
+    </div>
+
+    <table border="2">
+        <tr>
+            <th>p/p</th>
+            <th>NAME</th>
+            <th>PASSWORD</th>
+            <th>STATUS</th>
+            <th>ACTION</th>
+        </tr>
+
+        <tr th:each="user, state : ${usersTab}"
+            class="row" th:classappend="${state.odd} ? 'odd-row' : 'even-row'">
+            <td th:utext="${state.count}">index</td>
+            <td th:utext="${user.username}">username</td>
+            <td th:utext="${user.password}">password</td>
+            <td th:utext="${user.enabled}">enabled</td>
+            <td>
+                <a th:href="@{/edit/{id}(id=${user.getId()})}"><input type="button" value="UPDATE"></a>
+                <a th:href="@{/delete/{id}(id=${user.getId()})}"><input type="button" value="DELETE"></a>
+                <a th:href="@{/show/{id}(id=${user.getId()})}"><input type="button" value="SHOW"></a>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <input type="button" value="ADD USER" onclick="window.location.href = '/addNewUser' ">
+
+
+</body>
+</html>

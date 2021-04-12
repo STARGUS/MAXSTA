@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello user</title>
+</head>
+<body>
+<div>
+    <h3>Hello, <span th:text = "${user.username}"></span>!!</h3>
+    <p>this is USER PAGE</p>
+    <a href="/logout"><input type="button" value="LOGOUT"></a>
+    <br><hr><br>
+
+    <table border="2">
+        <tr>
+            <th>NAME</th>
+            <th>ENABLED</th>
+            <th>ROLE</th>
+        </tr>
+        <tr th:each="user, state : ${user}"
+            class="row" th:classappend="${state.odd} ? 'odd-row' : 'even-row'">
+            <td th:utext="${user.getUsername()}">username</td>
+            <td th:utext="${user.getEnabled()}">enabled</td>
+        </tr>
+        <tr th:each = "role, state: ${userRole}">
+            <td th:utext="${user.getRoles()}">roles</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

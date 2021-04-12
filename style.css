@@ -1,0 +1,388 @@
+body {
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 246, 252);
+}
+
+.inner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    z-index: 2;
+}
+
+.NavBarLeft {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 15px 0 5px 1px;
+    /* padding: 10px 0px; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* background-color: cornflowerblue; */
+    height: max-content;
+}
+
+.NavBarLeft button {
+    padding: 10px 0px;
+    border: none;
+    height: 40px;
+    background-color: rgb(243, 246, 252);
+}
+
+.NavBarLeft button:hover {
+    background-color: rgb(187, 205, 209);
+}
+
+.NavBarLeft button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+button.active a {
+    font-size: 16px;
+    color: cornsilk;
+}
+
+.NavBarLeft button.active {
+    background-color: cornflowerblue !important;
+    color: cornsilk;
+}
+
+.shows {
+    display: none;
+    z-index: 2;
+}
+
+
+.content {
+    margin: 15px 10px 0px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-start: 4;
+    grid-column-end: 13;
+}
+
+.NavBar {
+    display: none;
+    grid-column: 1/13;
+    background-color: rgb(109, 106, 106);
+    height: auto;
+    width: 100%;
+    padding: 10px 0px 10px 15px;
+    z-index: 2;
+}
+
+.NavBar span {
+    margin-left: 25px;
+    font-size: 24px;
+    color: snow;
+}
+
+
+.menu-login-pass {
+    display: grid;
+    position: fixed;
+    margin: 10% 30% 0 30%;
+    width: 35%;
+    height: auto;
+    /* border: 0.5px solid cornflowerblue; */
+    box-shadow: 0 1px 4px rgb(100, 149, 200),
+        -23px 0 20px -23px cornflowerblue,
+        23px 0 20px -23px cornflowerblue,
+        0 0 40px rgb(187, 205, 209) inset;
+    text-align: center;
+    /* align-content: center; */
+    justify-items: center;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.text-menu {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: cornflowerblue;
+}
+
+.menu-login-pass .menu-login-btn {
+    display: flex;
+    justify-content: center;
+    /* padding: 0px 15px 20px; */
+}
+
+.menu-login-btn .btn-primary {
+    margin: 5% 10%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+    box-shadow: 0 1px 4px rgb(89, 142, 197),
+        -23px 0 20px -23px cornflowerblue,
+        23px 0 20px -23px cornflowerblue,
+        0 0 40px rgb(93, 137, 202) inset;
+}
+
+.form-control {
+    justify-content: center;
+    display: block;
+    width: 83%;
+    height: 34px;
+    margin: 5% 7%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    box-shadow: 0 1px 4px rgb(100, 149, 200),
+        -23px 0 20px -23px cornflowerblue,
+        23px 0 20px -23px cornflowerblue,
+        0 0 10px rgb(164, 190, 199) inset;
+}
+
+.form-controls {
+    min-width: 200px;
+    /* justify-content: center; */
+    display: block;
+    width: 43%;
+    height: 34px;
+    border-color: #0dcaf0;
+    margin: 7px 0px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    box-shadow: 0 1px 4px rgb(100, 149, 200),
+        -23px 0 20px -23px cornflowerblue,
+        23px 0 20px -23px cornflowerblue,
+        0 0 10px rgb(164, 190, 199) inset;
+}
+
+.FormUs {
+    margin-left: 17%;
+    margin-right: 8%;
+}
+
+input.btn-info {
+    color: #fff;
+    background-color: #0dcaf0;
+    border-color: #0dcaf0
+}
+
+input.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545
+}
+
+.btn-danger:hover {
+    color: #000;
+    background-color: #bb2d3b;
+    border-color: #b02a37
+}
+
+input.btn-warning {
+    color: #fff;
+    background-color: #ffc107;
+    border-color: #ffc107
+}
+
+input.btn {
+    padding: 1px;
+    height: auto;
+}
+
+tr>td {
+    align-content: center;
+    justify-content: center;
+    padding: 3px;
+}
+
+.card {
+
+    margin-left: 10px;
+}
+
+.form-select {
+    border-color: #0dcaf0;
+    min-height: 45px;
+    max-height: 400px;
+    min-width: 200px;
+    max-width: 43%;
+}
+
+.FormUser,
+.content,
+.tab-content {
+    margin: 15px 10px 3px 10px;
+}
+
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d
+}
+
+.UserBTN {
+    width: 43%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.UserBTN .btn-secondary {
+    margin: 10px 5px 0px 0px;
+    font-size: 14px;
+    /* width: 44%; */
+
+}
+
+.UserBTN .btn-primary {
+    margin: 10px 0px 0px 5px;
+    font-size: 14px;
+    /* width: 54%; */
+}
+
+.FormUpd {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: -20%;
+    justify-content: center;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    grid-column-start: 4;
+    grid-column-end: 10;
+    /* margin: 10% 30% 0 30%; */
+    border: 1px solid cornflowerblue;
+    background-color: rgb(243, 246, 252);
+    box-shadow: 0 1px 4px rgb(100, 149, 200),
+        -23px 0 20px -23px cornflowerblue,
+        23px 0 20px -23px cornflowerblue,
+        0 0 40px rgb(187, 205, 209) inset;
+        z-index: 99;
+
+}
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.7)
+}
+
+.FormUpd .form-controls {
+    min-width: 200px;
+    /* justify-content: center; */
+    display: block;
+    width: 100%;
+    height: 34px;
+    border-color: #0dcaf0;
+    margin: 7px 9%px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    box-shadow: 0 1px 4px rgb(100, 149, 200),
+        -23px 0 20px -23px cornflowerblue,
+        23px 0 20px -23px cornflowerblue,
+        0 0 10px rgb(164, 190, 199) inset;
+}
+
+.FormUpd .form-select {
+    border-color: #0dcaf0;
+    min-height: 45px;
+    max-height: 400px;
+    min-width: 200px;
+    max-width: 100%;
+}
+
+.FormUpd .UserBTN {
+    min-width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.opens {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    z-index: 99;
+
+}
+
+modal.opens{
+    display: none;
+}
+
+@media(max-width: 952px) {
+    .UserBTN {
+        display: grid;
+        grid-template-columns: 1fr;
+        min-width: 200px;
+    }
+
+    .UserBTN .btn-secondary {
+        margin: 10px 0px 0px 0px;
+        font-size: 14px;
+        width: 100% !important;
+
+    }
+
+    .UserBTN .btn-primary {
+        margin: 10px 0px 0px 0px;
+        font-size: 14px;
+        width: 100% !important;
+    }
+
+
+}

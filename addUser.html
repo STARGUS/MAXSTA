@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <menu type="toolbar" style="list-style-type:none">
+        <li>
+            <menu label="menu">
+                <button type="button"><a href="/admin"> ADMIN </a></button>
+            </menu>
+        </li>
+    </menu>
+</head>
+<body>
+
+    <div>
+    <form th:method = "POST" th:action = "@{/saveUser}" th:object = "${user}" >
+        <fieldset style="background-color: lavender">
+
+            <legend>Add new User form:</legend>
+
+            <p><label style="margin-left: 50px"> Name <em>*</em> </label>
+                <input type="text" placeholder="enter user name" th:field="*{username}"></p>
+
+            <p><label style="margin-left: 50px"> Password <em>*</em>
+                </label><input type="text" placeholder="enter user password" th:field="*{password}"></p>
+
+            <p><label style="margin-left: 50px"> Status <em>*</em>
+            </label><input type="text" placeholder="Status" th:field="*{enabled}"></p>
+            <label>Role</label><br><hr>
+            <select id="allRoles" name="allRoles" size="2" multiple="multiple">
+                <option th:each="role : ${allRoles}"
+                        th:value="${role.role}"
+                        th:text="${role.role}">Role name</option>
+            </select>
+
+        </fieldset>
+        <p style=""><input type="submit" value="ADD_USER"></p>
+    </form>
+
+</div>
+
+
+</body>
+</html>
