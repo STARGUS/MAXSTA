@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+.wrapper {
+    position: absolute;
+    width: 498px;
+    height: 636px;
+    left: calc(50% - 498px/2 - 1.5px);
+    top: 210px;
+
+    background: #111111;
+    border-radius: 15px;
+    transition: 0.6s ease all;
+}
+
+.reg {
+    height: 709px !important;
+    top: 165px !important;
+    transition: 0.8s ease all;
+}
+
+.header {
+    position: absolute;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    /* identical to box height */
+    margin: 76px 90px auto 89px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.header .entrance {
+    position: absolute;
+    width: 70px;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+
+}
+
+.header .registration {
+    position: absolute;
+    width: 189px;
+    height: 32px;
+    left: 130px;
+    top: 0px;
+}
+
+.header .Rectangle-1 {
+    position: absolute;
+    width: 67px;
+    height: 2px;
+    left: 3px;
+    top: 39px;
+
+    background: #FFB11B;
+    transition: 0.8s ease all;
+}
+
+.header .registration:hover~.Rectangle-2 {
+    position: absolute;
+    width: 182px;
+    height: 2px;
+    left: 133px;
+    top: 39px;
+
+    background: #FFB11B;
+    transition: 0.4s ease all;
+}
+
+.header .registration .Rectangle-2 {
+    position: absolute;
+    width: 182px;
+    height: 2px;
+    /* left: 133px; */
+    top: 39px;
+
+    background: #FFB11B;
+    transition: 0.4s ease all;
+}
+
+.hide {
+    display: none;
+}
+
+.footer .btn-form-login {
+    /* BTN sign in */
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 143px;
+
+    position: absolute;
+    width: 351px;
+    height: 60px;
+    left: calc(50% - 351px/2 - 1.5px);
+    bottom: 125px;
+
+    background: #FFB11B;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer .btn-form-1 {
+
+    position: static;
+    width: 65px;
+    height: 20px;
+    /* left: calc(50% - 143px/2); */
+    top: 20px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.footer .error-pass {
+
+    position: absolute;
+    width: 301px;
+    height: 17px;
+    left: calc(50% - 301px/2 - 26.5px);
+    bottom: 80px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+
+    color: #959595 !important;
+
+}
+
+#LoginUser .body .email {
+    position: absolute;
+    /* width: 351px; */
+    height: 26px;
+    left: 72px;
+    top: 298px;
+}
+
+#LoginUser .body .password {
+    position: absolute;
+    /* width: 351px; */
+    height: 26px;
+    left: 72px;
+    top: 358px;
+
+}
+
+#Registration .body .text-name {
+    position: absolute;
+    /* width: 301px; */
+    height: 26px;
+    left: 72px;
+    top: 259px;
+}
+
+#Registration .body .email {
+    position: absolute;
+    /* width: 301px; */
+    height: 26px;
+    left: 72px;
+    top: 326px;
+}
+
+#Registration .body .password1 {
+    position: absolute;
+    /* width: 301px; */
+    height: 26px;
+    left: 72px;
+    top: 393px;
+}
+
+#Registration .body .password2 {
+    position: absolute;
+    /* width: 301px; */
+    height: 26px;
+    left: 72px;
+    top: 460px;
+}
+
+#Registration .body .checkbox {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    left: 72px;
+    top: 520.5px;
+
+}
+
+#Registration .body .checkbox input {
+    opacity: 0;
+    display: none;
+    /* left: 72px;
+    top: 520.5px;
+    height: 17px;
+    width: 1.25em; */
+}
+#Registration .body .checkbox input[type="checkbox"]:checked + label, 
+#Registration .body .checkbox input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+    
+}
+
+
+
+#Registration .body .checkbox input[type="checkbox"]:checked + label:before, 
+#Registration .body .checkbox input[type="checkbox"]:not(:checked) + label:before{
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #FFB11B;
+    background-color: #111;
+    border-radius: 4px;
+}
+#Registration .body .checkbox input[type="checkbox"]:checked + label:before {
+   content: "\2713";
+   font-weight: 900;
+    color: #FFB11B;
+   text-align: center;
+}
+#Registration .body .checkbox input[type="checkbox"]:checked + label:after, 
+#Registration .body .checkbox input[type="checkbox"]:not(:checked) + label:after {
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #e145a3;
+    border-bottom: 4px solid #e145a3;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+#Registration .footer .btn-form-registration {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 65px;
+
+    position: absolute;
+    width: 351px;
+    height: 60px;
+    left: calc(50% - 351px/2 - 1.5px);
+    bottom: 74px;
+    top: 595px;
+    background: #FFB11B;
+}
+
+.body .label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    pointer-events: none;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+
+    color: #959595;
+    transition: 0.2s ease all;
+}
+
+.body .input {
+    font-size: 14px;
+    display: block;
+    outline: none;
+    width: 351px;
+    border: none;
+    color: #fff;
+    border-bottom: 1px solid #FFB11B;
+    background-color: #111;
+
+}
+
+.body .input:focus~label,
+.body .input:valid~label {
+    top: -30px;
+    font-size: 14px;
+    color: #959595;
+}
+
+.body .bar {
+    position: relative;
+    display: block;
+    width: 351px;
+
+}
+
+/* .body .bar::before, .body .bar::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #FFB11B;
+    transition: 0.2s ease all;
+    
+} */
+.body .bar::before {
+    left: 50%;
+}
+
+.body .bar::after {
+    right: 50%;
+}
+
+.body .input:focus~.bar::before,
+.body .input:focus~.bar::after {
+    width: 50%;
+}
+
+#Registration .body .checkbox label {
+
+    position: relative;
+    /* left: -60px; */
+    width: 301px;
+    height: 17px;
+    /* left: calc(50% - 200px/2 + 20.5px); */
+    bottom: 2.5px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+
+    color: #959595;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 19px;
+}
+
+.footer .btn-form-2 {
+    position: static;
+    width: 221px;
+    height: 20px;
+    left: 65px;
+    top: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: #000000;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="inner-wrapper">
+        <signin class="wrapper">
+            <div class="header">
+                <div class="entrance">
+                    Вход
+                    <div class="line Rectangle-1"></div>
+                </div>
+                <div class="registration">
+                    Регистрация
+                    <div class="line"> </div>
+                </div>
+            </div>
+            <form class="show" action="true" id="LoginUser">
+                <div class="body">
+                    <div class="email">
+                        <input class="input" type="email" name="email" id="..." required>
+                        <span class="bar"></span>
+                        <label class="label">Введите ваш e-mail</label>
+                    </div>
+                    <div class="password">
+                        <input class="input" type="password" name="password" id="..." required>
+                        <span class="bar"></span>
+                        <label class="label">Введите ваш пароль</label>
+                    </div>
+                </div>
+                <div class="footer">
+
+                    <button class="btn-form-login">
+                        <span class="btn-form-1">Войти</span>
+                    </button>
+                    <a href="#">
+                        <div class="error-pass">
+                            Забыли пароль?
+                        </div>
+                    </a>
+                </div>
+            </form>
+            <form class="hide" id="Registration">
+                <div class="body">
+                    <div class="text-name">
+                        <input class="input" type="text" name="emailUser" id="..." required>
+                        <span class="bar"></span>
+                        <label class="label">Введите ваше имя</label>
+                    </div>
+                    <div class="email">
+                        <input class="input" type="email" name="emailUser" id="..." required>
+                        <span class="bar"></span>
+                        <label class="label">Введите ваш e-mail</label>
+                    </div>
+                    <div class="password1">
+                        <input class="input" type="text" name="passwordUser1" id="..." required>
+                        <span class="bar"></span>
+                        <label class="label">Придумайте ваш пароль</label>
+                    </div>
+                    <div class="password2">
+                        <input class="input" type="text" name="passwordUser2" id="..." required>
+                        <span class="bar"></span>
+                        <label class="label">Повторите ваш пароль</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkUser" id="check">
+                        <label for="check">Я даю согласие на обработку своих данных </label>
+                    </div>
+                    <div class="footer">
+                        <button class="btn-form-registration">
+                            <label class="btn-form-2">Зарегистрироваться</label>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </signin>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
